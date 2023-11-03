@@ -2,6 +2,7 @@
 using System.Numerics;
 using Dalamud.Interface.Internal;
 using Dalamud.Interface.Windowing;
+using FFXIVClientStructs.FFXIV.Client.System.Framework;
 using ImGuiNET;
 
 namespace SamplePlugin.Windows;
@@ -27,6 +28,7 @@ public class MainWindow : Window, IDisposable
             //Max size of the window
             MaximumSize = new Vector2(float.MaxValue, float.MaxValue)
         };
+        
 
         this.GoatImage = goatImage;
         this.Plugin = plugin;
@@ -62,3 +64,5 @@ public class MainWindow : Window, IDisposable
         ImGui.Unindent(55);
     }
 }
+
+/

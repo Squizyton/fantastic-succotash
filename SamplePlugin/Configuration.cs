@@ -1,7 +1,7 @@
 ﻿using Dalamud.Configuration;
 using Dalamud.Plugin;
 using System;
-
+using Dalamud.Game.ClientState;
 namespace SamplePlugin
 {
     [Serializable]
@@ -9,7 +9,13 @@ namespace SamplePlugin
     {
         public int Version { get; set; } = 0;
 
+        #region Sound
+        
+        public int SoundDeviceId { get; set; } = -1;
+        public bool PlayInBackground { get; set; } = false;
+        #endregion
         public bool SomePropertyToBeSavedAndWithADefault { get; set; } = true;
+        
 
         // the below exist just to make saving less cumbersome
         [NonSerialized]
@@ -17,6 +23,11 @@ namespace SamplePlugin
 
         public void Initialize(DalamudPluginInterface pluginInterface)
         {
+            
+            
+            
+            
+            
             this.PluginInterface = pluginInterface;
         }
 
